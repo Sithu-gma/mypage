@@ -1,0 +1,17 @@
+@media(max-width: 768px){
+    #menu {
+        display: none;   
+    }
+    .hamburger {
+        display: block;
+    }
+    .slide {
+        width: 200px;
+        background-color:darkblue;
+        color: aliceblue;
+        position: absolute;
+        top: 20px;
+        right: 0;
+        z-index: 1000;
+    }
+}

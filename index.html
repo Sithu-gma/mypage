@@ -6,20 +6,27 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sithu's Portfolio</title>
     <link rel="stylesheet" href="css/style.css">
-
+    <link rel="stylesheet" href="css/layout.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/svg-with-js.min.css">
 </head>
 <body>
    <section id="home">
        <header>
-           <a href="" class="brand">Sithu <span id="title">00</span></a>
+           <a href="" class="brand">Sithu Kyaw <span id="title">Home</span></a>
            
-            <ul id="menu">
-                <li><a href="#home">Home</a></li>
-                <li><a href="#product">Product</a></li>
-                <li><a href="#price">Price</a></li>
-                <li><a href="#contact">Contact</a></li>
-                <li><a href="#about">About</a></li>
+            <ul id="menu" class="slide">
+
+                <li><a href="#home"><i class="fa-solid fa-rectangle-xmark"></i></a></li>
+                <li><a href="#home"><i class="fas fa-home"></i>Home</a></li>
+                <li><a href="#product"><i class="fas fa-cog"></i>Product</a></li>
+                <li><a href="#price"><i class="fas fa-circle"></i>Price</a></li>
+                <li><a href="#contact"><i class="fas fa-user"></i>Contact</a></li>
+                <li><a href="#about"><i class=""></i>About</a></li>
             </ul>
+            <button class="hamburger">
+                <i class="fas fa-bars"></i>
+            </button>
        </header>
        <h1>This is Home</h1>
    </section>
@@ -36,14 +43,22 @@
     <h1>This is About</h1>
    </section>
    <script>
+//title bar text
         let title=document.getElementById('title');
         let list=document.querySelectorAll('li>a');
         let txt="";
         for(let e = 0 ; e < list.length ; e++) {
             list[e].addEventListener('click', function() {
                 title.innerHTML=list[e].text.toLowerCase();
+            });
+        }
+// menu bar
+        let hamburger=document.getElementsByClassName("hamburger")[0];
+        let menu=document.getElementById("menu");
+        hamburger.addEventListener('click', function(){
+            hamburger.style.display="none";
+            menu.style.display="block";
         });
-}
         
       
     
